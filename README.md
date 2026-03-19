@@ -14,8 +14,6 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 ### 🤖 CareWatch — Multi-Agent AI for Elderly Care
 
-> **Hackathon · NUS · Problem Statement 2: AI for Multimodal Remote Health & Wellness Monitoring**
-
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-6A0DAD?style=flat-square)
 ![Groq](https://img.shields.io/badge/Groq-00C4B4?style=flat-square)
