@@ -1,6 +1,6 @@
 # Hi, I'm Chen Meng 👋
 
-**AI Engineer** — building agentic systems that get evaluated, not just demonstrated.
+**AI Crazed** — building agentic systems for the love of the game
 
 Targeting internships in **agentic AI** and **climate tech** — specifically roles where AI ships to production and evals block bad merges.
 
