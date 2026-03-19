@@ -12,7 +12,7 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 ## 🛠️ CURRENT PROJECTS
 
-### 🤖 CareWatch — Multi-Agent AI for Elderly Care
+### 🤖 CareWatch — Multi-Agent AI for Elderly Care Monitoring
 
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-6A0DAD?style=flat-square)
@@ -23,7 +23,7 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 5-agent LangGraph pipeline routing anomalies to specialist agents (FallAgent · MedAgent · ChronicAgent · RoutineAgent · SummaryAgent). Hybrid RAG layer (BM25 + ChromaDB + RRF) retrieves clinical context grounded in 47 verified facts. YOLO11x pose estimation converts raw video to abstract skeletons — no pixel data stored, PDPA-compliant.
 
-**Measured, not claimed:**
+**Measured (not claimed):**
 
 | Metric | Value |
 |--------|-------|
@@ -35,7 +35,7 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 ---
 
-### ⚙️ WarpSense — Multi-Agent Weld Quality Assessment
+### ⚙️ WarpSense — Multi-Agent Weld Quality Assessment for Shipyards
 
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
@@ -45,7 +45,7 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 Real-time LOF/LOP defect detection on ESP32 sensor data. LangGraph coordinator routes to three domain specialists (ThermalAgent · GeometryAgent · ProcessStabilityAgent). Deterministic SummaryAgent merges results with a safety-first priority override — the final disposition never depends on the LLM alone.
 
-**Measured, not claimed:**
+**Measured (not claimed)d:**
 
 | Metric | Value |
 |--------|-------|
@@ -58,7 +58,7 @@ Real-time LOF/LOP defect detection on ESP32 sensor data. LangGraph coordinator r
 
 ---
 
-### 🏥 NeonatalGuard — Agentic Clinical Decision Support
+### 🏥 NeonatalGuard — Agentic Clinical Decision Support for Early Onset Sepsis in Pre-mature Babies 
 
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
 ![Qdrant](https://img.shields.io/badge/Qdrant-DC143C?style=flat-square)
@@ -69,7 +69,7 @@ Real-time LOF/LOP defect detection on ESP32 sensor data. LangGraph coordinator r
 
 End-to-end agentic system for early detection of neonatal deterioration from ECG-derived HRV signals. 6-node LangGraph agent runs Qdrant hybrid retrieval → cross-encoder reranking → instructor-enforced LLM reasoning → Pydantic protocol compliance gate → episodic memory write. FNR=0.000 for RED alerts is a hard design constraint enforced by a deterministic self-check node independent of the LLM.
 
-**Measured, not claimed:**
+**Measured (not claimed):**
 
 | Metric | Value |
 |--------|-------|
