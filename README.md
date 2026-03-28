@@ -23,16 +23,6 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 5-agent LangGraph pipeline routing anomalies to specialist agents (FallAgent · MedAgent · ChronicAgent · RoutineAgent · SummaryAgent). Hybrid RAG layer (BM25 + ChromaDB + RRF) retrieves clinical context grounded in 47 verified facts. YOLO11x pose estimation converts raw video to abstract skeletons — no pixel data stored, PDPA-compliant.
 
-**Measured (not claimed):**
-
-| Metric | Value |
-|--------|-------|
-| F1 / FNR | 1.000 / 0.000 across 20 deterministic scenarios |
-| RAG MRR | 0.960 across 25 ground-truth queries |
-| Agent architectures benchmarked | 3 (custom · LangGraph · LangChain) |
-| Retrieval | BM25 + dense + RRF hybrid, k=60 |
-| Deployment | `docker-compose up` single-command |
-
 ---
 
 ### ⚙️ WarpSense — Multi-Agent Weld Quality Assessment for Shipyards
@@ -45,20 +35,9 @@ Targeting internships in **agentic AI** and **climate tech** — specifically ro
 
 Real-time LOF/LOP defect detection on ESP32 sensor data. LangGraph coordinator routes to three domain specialists (ThermalAgent · GeometryAgent · ProcessStabilityAgent). Deterministic SummaryAgent merges results with a safety-first priority override — the final disposition never depends on the LLM alone.
 
-**Measured (not claimed)d:**
-
-| Metric | Value |
-|--------|-------|
-| FNR (safety-critical) | 0.000 across 24 deterministic eval scenarios |
-| Agent architectures benchmarked | 3 (single · LangGraph · LangChain) |
-| Prompt variants evaluated | 8 (format · context · self-check dimensions) |
-| KB chunks | 63 (AWS D1.1 · ISO 5817 · IACS Rec.47) |
-| RAG eval | 25 ground-truth query→chunk pairs at k=6 |
-| Observability | LangSmith via zero-instrumentation env var toggle |
-
 ---
 
-### 🏥 NeonatalGuard — Agentic Clinical Decision Support for Early Onset Sepsis in Pre-mature Babies 
+### 🏥 NeonatalGuard — Agentic Clinical Decision Support for Early Onset Sepsis in Pre-mature Babies
 
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
 ![Qdrant](https://img.shields.io/badge/Qdrant-DC143C?style=flat-square)
@@ -69,19 +48,51 @@ Real-time LOF/LOP defect detection on ESP32 sensor data. LangGraph coordinator r
 
 End-to-end agentic system for early detection of neonatal deterioration from ECG-derived HRV signals. 6-node LangGraph agent runs Qdrant hybrid retrieval → cross-encoder reranking → instructor-enforced LLM reasoning → Pydantic protocol compliance gate → episodic memory write. FNR=0.000 for RED alerts is a hard design constraint enforced by a deterministic self-check node independent of the LLM.
 
-**Measured (not claimed):**
+---
 
-| Metric | Value |
-|--------|-------|
-| F1 / FNR | 1.000 / 0.000 across 24 deterministic scenarios (8 RED · 8 YELLOW · 8 GREEN) |
-| RAG MRR | 0.960 · hybrid dense + BM25 sparse + RRF → FlashRank cross-encoder reranker |
-| Output reliability | instructor + Pydantic v2 schema enforcement, auto-retry on failure |
-| Protocol compliance | Pydantic `model_validator` gates every recommended action |
-| CI | GitHub Actions evals on every commit · merge blocked on F1 regression · <30s · zero API cost |
-| Memory | Per-patient episodic memory (SQLite) surfaced in every agent reasoning step |
-| Observability | LangSmith per-node traces · cost tracking · latency SLOs |
-| Fine-tuning | 4-way comparison: base prompt · instruction tuned · LoRA · QLoRA |
-| Deployment | `docker-compose up` — API + Qdrant + eval runner |
+### 🔌 GroundWire — Reliability Middleware for Web Agents
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![OpenAI](https://img.shields.io/badge/GPT--4o-412991?style=flat-square&logo=openai&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic_v2-E92063?style=flat-square)
+
+> *"TinyFish gives you the agent. GroundWire gives you the SLA."*
+
+Reliability middleware that wraps the TinyFish web agent API — one import, seven features, zero new infrastructure. Taps the live SSE event stream and handles the failure modes that kill production agents silently.
+
+| Feature | What it does |
+|---------|-------------|
+| Trajectory Validation | Scores every 5 steps on a 4-axis rubric (goal alignment · efficiency · risk · progress rate). Dual GPT-4o gate — conservative score wins. Triggers replan before drift compounds. |
+| Self-Healing | Hypothesis → TinyFish sandbox → confirmed fix. Proves the fix before replanning. Never guesses. |
+| Adversarial Hardening | Post-stream block detection (Cloudflare · DataDome · CAPTCHA). GPT-4o mini classifies, auto-retries on stealth profile with US proxy. |
+| Cross-Agent Memory | Per-domain quirks with confidence scoring + Supabase shared network. Run 1: 11 steps. Run 2 warm: 6 steps. |
+| CAPTCHA Escalation | Closes stream immediately on CAPTCHA detect — routes to human review, never into a replan loop. |
+| Guardrails | Composable pre/post rules: DomainAllowlist · PIIScrubber · ActionBudget. Fail fast before TinyFish fires. |
+| Evals | SessionRecorder + GPT-4o mini TrajectoryScorer. pass@3: 100% · mean faithfulness: 0.95 |
+
+Every feature degrades gracefully — no Supabase credentials, no OpenAI key, no TinyFish key: the system never crashes, the run always completes.
+
+Built at the **TinyFish × OpenAI Hackathon**.
+
+---
+
+### 🏆 FunctionGemma — On-Device Function Calling (Cactus × Google DeepMind Hackathon)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-4285F4?style=flat-square&logo=google&logoColor=white)
+
+**Ranked Top 5 on the Evaluation Leaderboard** at the Cactus × Google DeepMind Hackathon (AI Tinkerers & AI Nexus, Singapore).
+
+Competition goal: build the most accurate and fastest on-device function-calling system using a 270M parameter model (`functiongemma-270m-it`) running locally via the Cactus runtime — with Google Gemini 2.5 Flash as cloud fallback.
+
+Given a natural language message and a tool schema, the system identifies which tool(s) to call and extracts the correct arguments as structured JSON. Evaluated on F1 (60%), on-device ratio (25%), and latency (15%) across easy / medium / hard compound requests.
+
+Key engineering to squeeze accuracy out of a 270M model:
+- **Hinted prompts** — rule-based regex pre-populates time values, 24h alarm conversions, and proper nouns before the model sees the prompt
+- **Clause splitting** — compound requests split per tool; small models handle one call at a time far more reliably than multi-tool generation in one shot
+- **Argument post-processing** — time normalisation, 24h recomputation, and proper-noun casing restored after inference
+- **Graceful cloud fallback** — Gemini 2.5 Flash triggered only on validation failure; eval environment is optimised entirely for on-device
 
 ---
 
@@ -115,9 +126,7 @@ End-to-end agentic system for early detection of neonatal deterioration from ECG
 
 ## 🧠 How I Think About AI Systems
 
-I separate **deterministic metrics** (pipeline F1, FNR) from **probabilistic metrics** (LLM alignment). In a safety system, FNR=0.000 is the design goal — a missed weld defect, a missed fall, or a missed neonatal deterioration event is worse than a false alarm. Everything else is supporting evidence.
-
-When hybrid retrieval (BM25 + dense) came in at MRR=0.933 vs baseline 0.960 on CareWatch, I didn't ship it to production. I kept it as opt-in, documented why it regresses at 47 documents, and documented the cross-encoder upgrade path. That's the difference between building a feature and building a system.
+I separate **deterministic metrics** (pipeline F1, FNR) from **probabilistic metrics** (LLM alignment). In a safety system, FNR=0.000 is the design goal — a missed weld defect, a missed fall, or a missed neonatal deterioration event is worse than a false alarm. 
 
 In WarpSense, the LOF/LOP safety override is deterministic and layered three times independently — in each specialist, in SummaryAgent, and in the LangChain fallback path. The LLM can fail completely and the safety gate still holds. Eval scenarios test the threshold floor (e.g. `heat_diss_max_spike=41.0` against a threshold of 40.0), not the interior, because that's where systems actually break.
 
@@ -125,9 +134,8 @@ In NeonatalGuard, the same principle applies at the protocol layer: instructor e
 
 ---
 
-## 🌱 Currently Building
+## Currently Building
 
-- **Emissions RAG pipeline** — GHG Protocol · CSRD · SBTi · Scope 1/2/3 methodology, applying the same agentic architecture to climate tech
 - **Cross-encoder reranking** in production retrieval (`ms-marco-MiniLM-L-12-v2`)
 - **QLoRA domain adaptation** — parameter-efficient fine-tuning on M2 MacBook Air
 - **LangSmith SLOs** — cost-per-query tracking and latency regression detection in CI
