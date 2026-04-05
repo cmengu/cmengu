@@ -69,6 +69,17 @@ Reliability middleware for web agents (TinyFish is one example) that adds one im
 
 ---
 
+# [Agnes-Beta](https://github.com/cmengu/Agnes-Beta) - Research-as-a-Service for Deep Research
+ 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![OpenAI Compatible](https://img.shields.io/badge/OpenAI--compatible-412991?style=flat-square&logo=openai&logoColor=white)
+ 
+A multi-agent research and writing pipeline with a persistent memory layer: user run history, distilled skill summaries, and a cross-goal source cache that prevents redundant fetches across sessions. Goals are validated against a written constitution before any compute is spent; research sub-tasks run in parallel with prompt-injection sanitisation and a Playwright fallback for JS-heavy pages. A debate-style critic scores output across four axes and routes targeted rechecks back into the same thread pool; every delivery is prefixed with a quality badge showing confidence, critic score, revision count, and source coverage.
+
+---
+
 ### [Ballast](https://github.com/cmengu/ballast) — Spec-Driven Execution Harness for Multi-Agent Systems
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
