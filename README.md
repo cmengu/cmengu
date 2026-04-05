@@ -75,7 +75,17 @@ Reliability middleware for web agents (TinyFish is one example) that adds one im
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![pydantic-ai](https://img.shields.io/badge/pydantic--ai-E92063?style=flat-square)
 
-A spec-verification kernel for long-running agentic systems. Write an execution contract through a short conversation (intent, success criteria, constraints, allowed tools) and the system locks it before any agent runs. A trajectory checker scores every node boundary against the locked spec across three dimensions: tool compliance, constraint adherence, and intent alignment. When drift is detected, a critic agent diagnoses the failure before a replan fires. Live spec updates can be injected between nodes without stopping the run; the version hash in the audit log changes at exactly the node where the update landed. The spec outlasts every model upgrade — the contract is the stable artefact, not the model.
+A spec-verification kernel for long-running agentic systems. Write an execution contract through a short conversation (intent, success criteria, constraints, allowed tools) and the system locks it before any agent runs. A trajectory checker scores every node boundary against the locked spec across three dimensions: tool compliance, constraint adherence, and intent alignment. When drift is detected, a critic agent diagnoses the failure before a replan fires. Live spec updates can be injected between nodes without stopping the run; the version hash in the audit log changes at exactly the node where the update landed. 
+
+---
+
+### [spec-covenant](https://github.com/cmengu/spec-covenant) — Spec-Driven Execution Harness for Multi-Agent Systems
+ 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![pydantic-ai](https://img.shields.io/badge/pydantic--ai-E92063?style=flat-square)
+ 
+Write a contract through a short conversation and agents implement strictly against it. A verification agent scores every node boundary against the locked spec; a critic agent diagnoses failures before any replan fires. The spec outlasts every model upgrade — the contract is the stable artefact, not the model.
 
 ---
 
