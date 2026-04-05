@@ -69,7 +69,7 @@ Reliability middleware for web agents (TinyFish is one example) that adds one im
 
 ---
 
-# [Agnes-Beta](https://github.com/cmengu/Agnes-Beta) - Research-as-a-Service for Deep Research
+### [Agnes-Beta](https://github.com/cmengu/Agnes-Beta) - Research-as-a-Service for Deep Research
  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/LangGraph-FF6B35?style=flat-square)
