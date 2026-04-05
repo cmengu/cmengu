@@ -79,7 +79,7 @@ A spec-verification kernel for long-running agentic systems. Write an execution 
 
 ---
 
-### [spec-covenant](https://github.com/cmengu/spec-covenant) — Spec-Driven Execution Harness for Multi-Agent Systems
+### [spec-covenant](https://github.com/cmengu/spec-covenant) — Spec-Driven System Implementation
  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
