@@ -1,8 +1,8 @@
 # Hi, I'm Chen Meng 👋
 
-📍 **Singapore** &nbsp;|&nbsp; 🤖 **AI systems engineer** &nbsp;|&nbsp; 🎯 **Agentic AI · Climate tech**
+📍 **Singapore** &nbsp;|&nbsp; 🤖 **AI systems engineer**
 
-Building agentic pipelines where a **deterministic safety floor sits *above* the LLM, not inside it** — so the safe disposition holds even on a total model failure.
+Excited to build agentic systems.
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![LangGraph](https://img.shields.io/badge/-LangGraph-FF6B35?style=flat-square)
@@ -22,13 +22,14 @@ Building agentic pipelines where a **deterministic safety floor sits *above* the
 
 ## Projects
 
-### 🩺 Safety-Critical Agent Systems
-*Multi-agent pipelines where a deterministic floor overrides the model on anything safety-relevant.*
+### 🚀 Active Projects
+*Two world-model systems on a shared backbone — a tiered evaluation that decides the verdict, with a deterministic floor beneath the LLM — pointed at very different domains, plus a live eldercare platform.*
 
-- 🛡️ **[WarpSense](https://github.com/cmengu/warpsense)** — LangGraph coordinator fans out to thermal / geometry / process specialists; a threshold fallback holds the safety call on total model failure
-- 🫀 **[NeonatalGuard](https://github.com/cmengu/Neonatal)** — 6-node pipeline (Qdrant hybrid retrieval → cross-encoder rerank → instructor-enforced reasoning → Pydantic protocol gate); a rule-based self-check fires before any LLM output is read
-- 🧓 **[CareWatch](https://github.com/cmengu/CareWatch)** — multi-tenant PWA for 20+ Active Ageing Centres, full data isolation via PostgreSQL row-level security
-- 👁️ **[CareWatch Backend](https://github.com/cmengu/CareWatch-backend)** — 5-agent monitoring layer, BM25 + ChromaDB hybrid RAG (MRR 0.96), YOLO11x edge pose skeletons, PDPA-compliant by architecture
+- 🛡️ **[WarpSense](https://github.com/cmengu/warpsense)** — Real-time multi-agent detection of lack-of-fusion and lack-of-penetration weld defects from ESP32 sensor streams, built for shipyard inspection. A LangGraph coordinator fans out to thermal, geometry, and process-stability specialists that reason over a world model of the weld process rather than a single snapshot reading. The verdict is set by a tiered evaluation whose bottom layer is a deterministic threshold override, so the safety disposition holds even on a complete LLM failure.
+
+- 🫀 **[NeonatalGuard](https://github.com/cmengu/Neonatal)** — Agentic clinical decision support for early-onset neonatal sepsis, reading ECG-derived HRV signals to model an infant's physiological trajectory as its own world model. A 6-node LangGraph pipeline runs Qdrant hybrid retrieval, cross-encoder reranking, instructor-enforced reasoning, and a Pydantic protocol gate, with a rule-based self-check that fires before any LLM output is read. The same tiered evaluation decides the verdict here, so a critical alert can't be suppressed by a bad model response — and every alert traces back to a specific HRV z-score, retrieved chunk, and agent node.
+
+- 🧓 **[CareWatch](https://github.com/cmengu/CareWatch)** — Multi-tenant community eldercare platform for Singapore's Active Ageing Centres: volunteers run daily wellness check-ins through a PWA that needs no app store and runs on any budget Android browser. A 5-agent LangGraph monitoring layer routes anomalies to domain specialists over a BM25 + ChromaDB hybrid RAG (MRR 0.96), while YOLO11x pose estimation abstracts video to skeletons at the edge so no pixel data is ever stored. Deployed live with full data isolation across 20+ centres via PostgreSQL row-level security, PDPA-compliant by architecture · [demo](https://carewatch-blue.vercel.app/dashboard.html).
 
 ### ⚙️ Agent Reliability & Spec Harnesses
 *Middleware and kernels that keep long-running agents honest.*
@@ -46,6 +47,25 @@ Building agentic pipelines where a **deterministic safety floor sits *above* the
 ### 📱 Models & On-Device
 
 - 🤖 **[FunctionGemma](https://github.com/cmengu/Google-functionGemma-Hackathon)** — on-device function calling on a 270M model via Cactus, Gemini fallback · **Top 5, Cactus × Google DeepMind hackathon**
+
+<details>
+<summary>🗃️ &nbsp;<b>Miscellaneous & early work</b></summary>
+
+<br>
+
+- 🧭 **[thinkoo](https://github.com/cmengu/thinkoo)** — TypeScript project
+- 🏰 **[MengKiaKnight](https://github.com/cmengu/MengKiaKnight)** — TypeScript project
+- 📚 **[Knowledge-Base](https://github.com/cmengu/Knowledge-Base)** — personal notes and references
+- 🖥️ **[Frontend-Scaffolding](https://github.com/cmengu/Frontend-Scaffolding)** — clinical-dashboard frontend best practices
+- 🕸️ **[Spider-Full-Stack](https://github.com/cmengu/Spider-Full-Stack)** — full-stack take-home assignment
+- 💡 **[Interesting-projs](https://github.com/cmengu/Interesting-projs)** — running list of project ideas
+- 🌱 **[first-website](https://github.com/cmengu/first-website)** — early web project
+
+</details>
+
+## Activity
+
+![Chen Meng's contribution graph](https://gitlyy.vercel.app/api/contribution?username=cmengu&hide_border=true)
 
 ## Connect
 
